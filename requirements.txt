@@ -1,0 +1,14 @@
+opencv-python>=4.8
+opencv-contrib-python>=4.8
+numpy>=1.24
+open3d>=0.17
+pyyaml>=6.0
+matplotlib>=3.7
+tqdm>=4.65
+jupyter>=1.0
+ipykernel>=6.25
+
+# Opcionales para metodos de disparidad basados en redes neuronales (stereodemo)
+# stereodemo
+# onnx
+# onnxruntime
