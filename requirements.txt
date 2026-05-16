@@ -8,7 +8,5 @@ tqdm>=4.65
 jupyter>=1.0
 ipykernel>=6.25
 
-# Opcionales para metodos de disparidad basados en redes neuronales (stereodemo)
-# stereodemo
-# onnx
-# onnxruntime
+# Disparidad neural (CREStereo via disparity module de catedra)
+onnxruntime>=1.20

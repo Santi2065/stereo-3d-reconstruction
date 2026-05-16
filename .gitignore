@@ -12,6 +12,12 @@ Thumbs.db
 # Salida del pipeline (se regenera corriendo el notebook)
 buda_reconstruido.ply
 
+# Material de catedra (clonado local, no parte de este TP)
+ejemplos clase/
+
+# Modelos ONNX descargados por CREStereo (~30 MB c/u, se redownload al correr)
+models/
+
 # Datasets pesados de catedra (vienen del campus, no se versionan)
 datasets/stereo_budha_board/
 datasets/stereo_budha_charuco/
