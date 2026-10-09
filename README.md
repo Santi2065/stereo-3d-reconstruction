@@ -140,6 +140,6 @@ The I308 teaching staff provided the datasets, the calibration helpers, the [i30
   title        = {Stereo 3D Reconstruction of a Ceramic Buddha},
   year         = {2026},
   howpublished = {Universidad de San Andr{\'e}s, Computer Vision (I308)},
-  url          = {https://github.com/Santi2065/udesa-i308-tp2-reconstruccion-3d}
+  url          = {https://github.com/Santi2065/stereo-3d-reconstruction}
 }
 ```
