@@ -22,5 +22,6 @@ models/
 datasets/stereo_budha_board/
 datasets/stereo_budha_charuco/
 
-# El dataset propio SI se versiona (es entregable del TP).
-# Si pesa demasiado, considerar Git LFS para datasets/stereo_propio/calib/
+# Fotos propias: no se publican (aparecen personas en el aula)
+datasets/stereo_propio/calib/
+datasets/stereo_propio/captures/

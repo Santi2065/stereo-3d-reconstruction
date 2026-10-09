@@ -124,8 +124,7 @@ The notebooks import the course `disparity` package from `ejemplos clase/`, whic
 | `reconstruccion_3d.ipynb` | Pipeline on our own dataset: calibration from scratch, marker dictionary search, attempted fusion |
 | `calib.py`, `aruco.py` | Calibration and ChArUco helpers provided by the course |
 | `code_examples/` | Course examples: ChArUco pose and the `disparity` package (CREStereo and other methods) |
-| `datasets/stereo_propio/` | Our captures: 163 calibration pairs, 39 object pairs, `stereo_calibration.pkl` and `stereo_maps.pkl` |
-| `I308 Vision Artificial - TP2 - *.pdf` | Assignment statement (Spanish) |
+| `datasets/stereo_propio/` | Calibration of our own stereo camera (`stereo_calibration.pkl`, `stereo_maps.pkl`). The 163 calibration pairs and 39 object pairs we captured are not published because other people in the classroom appear in them. |
 | `docs/figures/` | Script and style used for the figures in this README |
 
 ## Acknowledgements
