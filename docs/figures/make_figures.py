@@ -4,7 +4,7 @@ Figure 1 is a diagram. Figures 2-4 are the outputs saved in
 reconstruccion_3d_catedra.ipynb (the course dataset is not versioned in this repo,
 so they cannot be recomputed here); the script extracts them, blanks the Spanish
 panel titles (the README captions replace them) and stores optimized PNGs.
-Figure 5 is an Open3D screenshot that was committed in 537e27c and removed later;
+Figure 5 is an Open3D screenshot that was committed once and removed later;
 it is read back from the git history and cropped.
 
     pip install numpy matplotlib pillow
@@ -96,8 +96,10 @@ export(notebook_png(8), "fig3-disparity.png", blank=[(0, 58, 770, 82), (770, 78,
 export(notebook_png(15), "fig4-point-cloud.png", blank=[(0, 8, 600, 33), (600, 141, 1180, 163), (1200, 60, 1660, 84)])
 
 # Open3D screenshot of the reconstruction, recovered from the repository history
-shot = subprocess.run(["git", "-C", str(ROOT), "show", "537e27c:ScreenCapture_2026-05-20-00-19-30.png"],
-                      capture_output=True, check=True).stdout
+SHOT = "ScreenCapture_2026-05-20-00-19-30.png"
+added = subprocess.run(["git", "-C", str(ROOT), "log", "--all", "--diff-filter=A", "--format=%H", "--", SHOT],
+                       capture_output=True, text=True, check=True).stdout.split()[-1]
+shot = subprocess.run(["git", "-C", str(ROOT), "show", f"{added}:{SHOT}"], capture_output=True, check=True).stdout
 img = Image.open(io.BytesIO(shot)).convert("RGB")
 x0, y0, x1, y1 = Image.eval(img.convert("L"), lambda v: 255 if v < 250 else 0).getbbox()
 export(img.crop((max(x0 - 20, 0), max(y0 - 20, 0), min(x1 + 20, img.width), min(y1 + 20, img.height))),
